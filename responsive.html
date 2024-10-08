@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design</title>
+ 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+     
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+ 
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top pb-2">
+    <a class="navbar-brand" href="#">
+        <img src="data:image/png;base64,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" alt="Innomatics Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <!-- <div class="navbar-caption justify-content-center">  
+        <h1>Welcome to Innomatics</h1>
+      </div> -->
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Courses</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+ 
+
+  
+     
+<section>
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://www.innomatics.in/wp-content/uploads/2023/12/mb-banner.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://innomatics.in/wp-content/uploads/2022/07/Award-Landing-Page-Banner.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://innomatics.in/wp-content/uploads/2023/01/AWARD-PAGE.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://www.innomatics.in/wp-content/uploads/2023/07/award.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://www.innomatics.in/wp-content/uploads/2024/04/2-1-1.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://innomatics.in/wp-content/uploads/2023/01/Artboard-1.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+
+
+       
+<section class="pt-5" style="background-color: #f5f5f5;">
+  <div class="container text-center" style="background-color: #333; color: white; padding: 20px; border-radius: 10px;">
+      <div class="row" href="#">
+          <div class="col-12 col-lg-6">
+              <h1>We just don’t train,<br> We transform the careers</h1>
+              <p>Innomatics Research Labs is a pioneer in <i>“Transforming Careers and Lives”</i>of individuals in the Digital Space by catering advanced training on NASSCOM Future skills prime Certified Data Science, Python, Predictive Analytics Modeler, Machine Learning, Artificial Intelligence (AI), Full-stack web development, Amazon Web Services (AWS), DevOps, Microsoft Azure, Big data Analytics, Digital Marketing, and Career Launching program for students who are willing to showcase their skills in the competitive job market with valuable credentials, and also can complete courses with a certificate.</p>
+              <h3>NASSCOM Futureskills Prime Registered Business Partner</h3>
+              <p>As an authorized “Training Partner with NASSCOM Futureskills Prime,” we strive to make individuals learn not just algorithms but also case studies and challenges derived from businesses. To improve the effectiveness and productivity of our trainee hackathons, workshops, and meetups are conducted on a timely basis. Having a dedicated placement vertical, which helps trainees conquer the business world, solves the complexities. Innomatics research labs are supporting over 100 companies in finding the best candidate, which can upskill the business requirements and foster growth.</p>
+              <h3>Best Edtech company</h3>
+              <p>Recognized and rewarded by Times Of India as the Best Training Institute in Hyderabad for Data Science & Digital Marketing Training. With relentless hard work, sophisticated equipment, advanced classrooms, cutting-edge training methodologies, practical training approach, and making individuals skillful. We have trained and placed 10000 students with a track record of 350+ batches, 200+ Hackathons, 150+ Industry Experts, 500+ Webinars, and 500+ Hiring Partners.</p>
+          </div>
+          <div class="col-12 col-lg-6">
+              <h1>What we are?</h1>
+              <div class="row row-cols-1 row-cols-md-2 g-4">
+                  <div class="col">
+                      <div class="card h-100 neon-card">
+                          <img src="https://i.pinimg.com/564x/e3/8f/5c/e38f5c626e9ccbfce0d008b4052569da.jpg" class="card-img-top icon-img" alt="...">
+                          <div class="card-body">
+                              <h5 class="card-title">
+                                Global Leaders in training</h5>
+                              <p class="card-text">We have trainers hailing from the fortune companies who understand the real-time business cases and can train individuals based on them.</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                      <div class="card h-100 neon-card">
+                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmcus9CfR7XuExbcoEGLlsHbP-Q2BzLUKsUQ&s" class="card-img-top icon-img" alt="...">
+                          <div class="card-body">
+                              <h5 class="card-title">Practical oriented approach</h5>
+                              <p class="card-text">Our training methodology isn’t confined to theoretical one; We have an exposure towards the real-time industry training by industry experts professionals.</p>
+                               
+                          </div>
+                      </div>
+                    </div>
+                  <div class="col pt-3">
+                      <div class="card h-100 neon-card">
+                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpZ0Bm8WHwpR2KUMIe4qWflr--W3tLzymSuw&s" class="card-img-top icon-img" alt="...">
+                          <div class="card-body">
+                              <h5 class="card-title">Hands-on projects & Internship</h5>
+                              <p class="card-text">We have trainers hailing from the fortune companies who understand the real-time business cases and can train individuals based on them.</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col pt-3">
+                      <div class="card h-100 neon-card">
+                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx7_Q8OT7cAvXdW15-hSo3aoBO4arKk5yPXQ&s" class="card-img-top icon-img" alt="...">
+                          <div class="card-body">
+                              <h5 class="card-title">100% Placement Assistance</h5>
+                              <p class="card-text">We promise Career Transformation; Having collaborations with top-notch companies and a dedicated placement vertical to help trainees aspire to aspirations.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<br>
+<!-- Courses Section -->
+<section class="courses-section py-5 px-5" style="background-color: #444;">
+  <div class="container">
+      <h1 class="text-center mb-4">Our Courses</h1>
+      <div class="row">
+          <div class="col-md-4">
+              <div class="card neon-card">
+                  <img src="https://www.innomatics.in/wp-content/uploads/2023/01/No-1-best-data-science-course-training-institute-in-hyderabad.jpg" class="card-img-top" alt="Data Science">
+                  <div class="card-body">
+                      <h5 class="card-title">Data Science</h5>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="card neon-card">
+                  <img src="https://www.innomatics.in/wp-content/uploads/2023/01/Full-Stack-Web-Development-training-program-Innomatics-research-labs-india.png" class="card-img-top" alt="Full Stack Development">
+                  <div class="card-body">
+                      <h5 class="card-title">Full Stack Development</h5>
+                  </div>
+              </div>
+          </div>
+        <div class="col-md-4">
+            <div class="card neon-card">
+                <img src="https://www.innomatics.in/wp-content/uploads/2023/01/Devops-institute-Innomatics-research-labs-KukatpallyHyderabad.jpg" class="card-img-top" alt="Full Stack Development">
+                <div class="card-body">
+                    <h5 class="card-title">Devops</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card neon-card">
+              <img src="https://www.innomatics.in/wp-content/uploads/2023/01/AWS-training-institute-Innomatics-research-labs-Kukatpallihyderabad.jpg" class="card-img-top" alt="Full Stack Development">
+              <div class="card-body">
+                  <h5 class="card-title">Amazon Web Services</h5>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card neon-card">
+            <img src="https://www.innomatics.in/wp-content/uploads/2023/01/big-data-analytics-with-hadoop-training-in-hyderabad-india.jpg" class="card-img-top" alt="Full Stack Development">
+            <div class="card-body">
+                <h5 class="card-title">NASSCOM Futureskills Prime Certified Predictive Analytics</h5>
+            </div>
+        </div>
+    </div>
+          <div class="col-md-4">
+              <div class="card neon-card">
+                  <img src="https://www.innomatics.in/wp-content/uploads/2023/01/digital-marketing-course-training-hyderabad.jpg" class="card-img-top" alt="Digital Marketing">
+                  <div class="card-body">
+                      <h5 class="card-title">Digital Marketing</h5>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<h1>Our Classrooms</h1>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+  </div>
+  <div class="carousel-inner">
+      <div class="carousel-item active">
+          <a href="https://link-to-your-first-slide.com" target="_blank">
+              <img src="https://www.innomatics.in/wp-content/uploads/2023/01/IMG_5427-scaled.jpg" class="d-block w-100" alt="Slide 1">
+          </a>
+      </div>
+      <div class="carousel-item">
+          <a href="https://link-to-your-second-slide.com" target="_blank">
+              <img src="https://www.innomatics.in/wp-content/uploads/cache/2023/01/IMG_5414-scaled/2727721008.jpg" class="d-block w-100" alt="Slide 2">
+          </a>
+      </div>
+      <div class="carousel-item">
+          <a href="https://link-to-your-third-slide.com" target="_blank">
+              <img src="https://www.innomatics.in/wp-content/uploads/cache/2023/01/IMG_5452-scaled/2408469614.jpg" class="d-block w-100" alt="Slide 3">
+          </a>
+      </div>
+      <div class="carousel-item">
+          <a href="https://link-to-your-fourth-slide.com" target="_blank">
+              <img src="https://www.innomatics.in/wp-content/uploads/2023/01/IMG_5413-scaled.jpg" class="d-block w-100" alt="Slide 4">
+          </a>
+      </div>
+      <div class="carousel-item">
+          <a href="https://link-to-your-fifth-slide.com" target="_blank">
+              <img src="https://www.innomatics.in/wp-content/uploads/2023/01/IMG_5450-scaled.jpg" class="d-block w-100" alt="Slide 5">
+          </a>
+      </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+<footer class="footer bg-dark text-white py-5">
+  <div class="container">
+      <div class="row">
+          <!-- About Section -->
+          <div class="col-md-4 mb-4">
+              <h3 class="text-danger">INNOMATICS RESEARCH LABS</h3>
+              <img src="data:image/png;base64,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" alt="" width="200px">
+              <p>A leading training institute, Innomatics Research Labs offers courses in areas such as NASSCOM Futureskills Prime Certified Data Science, Python, AI, Data Analytics, Full Stack Development, and Digital Marketing. Our practical training is designed meticulously to meet industry needs and provide valuable certification upon completion, empowering individuals to excel in their careers.</p>
+
+              <div class="social-icons">
+                  <a href="https://www.linkedin.com/school/innomatics-research-labs/posts/?feedView=all" class="text-white mr-2"><i class="fab fa-linkedin"></i></a>
+                  <a href="" class="text-white mr-2"><i class="fab fa-facebook"></i></a>
+                  <a href="#" class="text-white mr-2"><i class="fab fa-instagram"></i></a>
+                  <a href="#" class="text-white mr-2"><i class="fab fa-twitter"></i></a>
+                  <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+              </div>
+          </div>
+          <!-- Courses Section -->
+          <div class="col-md-4 mb-4">
+              <h4 class="text-danger">Courses</h4>
+              <ul class="list-unstyled">
+                  <li><a href="#" class="text-white">Data Science</a></li>
+                  <li><a href="#" class="text-white">Online Data Science</a></li>
+                  <li><a href="#" class="text-white">Advanced Generative AI</a></li>
+                  <li><a href="#" class="text-white">Full Stack Web Developer</a></li>
+                  <li><a href="#" class="text-white">Digital Marketing</a></li>
+                  <li><a href="#" class="text-white">Placements</a></li>
+                  <li><a href="#" class="text-white">Partner with us</a></li>
+                  <li><a href="#" class="text-white">Privacy Policy</a></li>
+              </ul>
+          </div>
+          <!-- Contact Section -->
+          <div class="col-md-4 mb-4">
+              <h4 class="text-danger">Contact Details:</h4>
+              <p><strong>Kukatpally — Hyderabad</strong><br>#205, 2nd Floor, Fortune Signature, Near JNTU Metro Station, Kukatpally, Hyderabad, Telangana 500085</p>
+              <p><strong>Gachibowli — Hyderabad</strong><br>2nd Floor, Leeway, BP Raju Marg, Opp. Sarath City Capital Mall, Beside Subbayagari Hotel, Laxmi Cyber City, Whitefields, Kondapur, Telangana 500081</p>
+              <p><strong>Pune</strong><br>2nd Floor, Sai Sayaji Apartment, 201, Paud Rd, beside VANAZ Metro, above Bata showroom, Ramkrishna Paramhans Nagar, Kothrud, Pune, Maharashtra 411038</p>
+              <p><strong>Phone/Whatsapp:</strong> +91-1800 208 3708 / +91-9951666671<br>+91-6304126766 / +91-9347804375</p>
+              <p><strong>For Course Inquiries:</strong> <a href="mailto:info@innomatics.in" class="text-white">info@innomatics.in</a></p>
+          </div>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

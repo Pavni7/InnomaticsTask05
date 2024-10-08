@@ -1,0 +1,204 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.custom-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.navbar {
+  background-color: #2b2929;
+  color: #000;
+}
+
+.navbar-brand img {
+  height: 40px;
+}
+
+.navbar-nav .nav-link {
+  size: 5cap;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(231, 223, 223);
+  transition: color 0.3s ease;
+}
+
+.navbar-nav {
+  margin-left: auto;
+  padding: 5px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #c1c1c3;
+}
+
+.navbar-nav .nav-item.active .nav-link {
+  color: #3498db;
+}
+
+.carousel-inner img {
+  height: 500px;
+  width: 100%;
+  object-fit: contain;
+  background-color: #000;
+}
+
+.carousel-caption h1 {
+  margin: 15%;
+  color: rgb(229, 230, 220);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.icon-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+}
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-inner {
+  max-height: 300px;
+}
+
+.neon-card {
+  background-color: #222;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3), 0 0 30px rgba(255, 255, 255, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.neon-card:hover {
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.7), 0 0 40px rgba(0, 255, 255, 0.5);
+}
+
+.neon-card .card-body {
+  color: white;
+  background-color: #111;
+}
+
+section {
+  background-color: #222;
+}
+
+h1 {
+  color: #00ffff;
+  font-family: cursive;
+  text-align: center;
+}
+
+h3 {
+  color: #ff00ff;
+}
+
+.custom-h2 {
+  color: #ff4500;
+}
+
+.custom-h3 {
+  color: #32cd32;
+}
+
+.carousel {
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+}
+
+.carousel-indicators button {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-indicators button.active {
+  background-color: #007bff;
+}
+
+.carousel-indicators button:hover {
+  background-color: #0056b3;
+}
+
+.carousel-item {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.footer h3, .footer h4 {
+  color: #e60000;
+  font-size: 18px;
+  background-color: #000;
+}
+
+.footer p, .footer a {
+  color: #f5f0f0;
+}
+
+.footer a:hover {
+  color: #101010;
+}
+
+.social-icons a {
+  font-size: 20px;
+}
+
+.footer .social-icons a:hover {
+  color: #e60000;
+  background-color: #000;
+}
